@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Suspense>
+    <template #fallback>
+      <FallbackComponent />
+    </template>
+    <template #default>
+      <HomeComponent />
+    </template>
+  </Suspense>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import FallbackComponent from "@/components/FallbackComponent";
+import { defineAsyncComponent} from "vue";
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
-  }
+    FallbackComponent,
+    HomeComponent: defineAsyncComponent(function (){
+      return new Promise(function (resolve) {
+        setTimeout(function () {
+          resolve(import("@/components/HomeComponent"));
+        }, 1000);
+      });
+    })
+  },
+
 }
 </script>

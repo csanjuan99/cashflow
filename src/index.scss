@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-blue: #0D96BF;
+  --main-green: #04B500;
+  --soft-blue: #CBF3FF;
+}
+
+.text-main-blue {
+  color: var(--main-blue);
+}
+
+.border-main-blue {
+  border-color: var(--main-blue);
+}
+
+.bg-soft-blue {
+  background-color: var(--soft-blue);
+}
+
+.text-main-green {
+  color: var(--main-green);
+}
