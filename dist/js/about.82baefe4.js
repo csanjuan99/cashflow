@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkcashflow"]=self["webpackChunkcashflow"]||[]).push([[443],{7381:function(n,a,s){s.r(a),s.d(a,{default:function(){return l}});var u=s(3396);const t={class:"about"},c=(0,u._)("h1",null,"This is an about page",-1),e=[c];function r(n,a){return(0,u.wg)(),(0,u.iD)("div",t,e)}var o=s(89);const f={},i=(0,o.Z)(f,[["render",r]]);var l=i}}]);
+//# sourceMappingURL=about.82baefe4.js.map
